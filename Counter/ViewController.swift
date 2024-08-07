@@ -9,17 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
     public var counter = 0
-
+    
+    @IBOutlet weak var counterValue: UILabel!
+    @IBOutlet weak var stapperValue: UIStepper!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func increaseСounter(_ sender: Any) {
-        counter += 1
+    
+    @IBAction func Stepper(_ sender: Any) {
+        counter = Int(stapperValue.value)
         counterValue.text = String(counter)
     }
-    
-    @IBOutlet weak var counterValue: UILabel!
 }
-

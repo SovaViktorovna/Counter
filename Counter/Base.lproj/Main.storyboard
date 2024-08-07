@@ -16,28 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afo-fr-1re">
-                                <rect key="frame" x="144" y="391" width="104" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="click"/>
-                                <connections>
-                                    <action selector="increaseСounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3uq-fT-Mx9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDm-FX-xau">
-                                <rect key="frame" x="152" y="255" width="89" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDm-FX-xau">
+                                <rect key="frame" x="191.33333333333334" y="249.00000000000003" width="10.333333333333343" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumValue="-10" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="myI-S7-NyU">
+                                <rect key="frame" x="149.66666666666666" y="319.33333333333331" width="94" height="32"/>
+                                <connections>
+                                    <action selector="Stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="irV-qF-rfg"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hDm-FX-xau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2XV-oC-SHC"/>
+                            <constraint firstItem="myI-S7-NyU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aje-pH-4lU"/>
+                            <constraint firstItem="myI-S7-NyU" firstAttribute="top" secondItem="hDm-FX-xau" secondAttribute="bottom" constant="50" id="ftj-2A-GN7"/>
+                            <constraint firstItem="hDm-FX-xau" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="kn8-0q-6dz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="counterValue" destination="hDm-FX-xau" id="HJv-SE-cLl"/>
+                        <outlet property="stapperValue" destination="myI-S7-NyU" id="BN3-YD-WBd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
